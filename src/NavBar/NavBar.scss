@@ -1,0 +1,130 @@
+@import "../sass/utils/variable";
+@import "../sass/components/button";
+@import "../sass/components/checkbox";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  //position: fixed;
+  position: absolute;
+  width: 100%;
+  color: $text_black;
+  //background-color: $navbar_light;
+  flex-wrap: wrap;
+  min-height: 60px;
+  z-index: 100;
+}
+.navbar[data-theme="default"] {
+  color: $text_white;
+  //background-color: $navbar;
+}
+.navbar[data-theme="light"] {
+  color: $text_black;
+  //background-color: $navbar_light;
+}
+.button_navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+.blanket {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(5px);
+  background-color: #000000e5;
+}
+.menu_navbar {
+  overflow: hidden;
+  padding: 5px;
+  border-radius: 15px;
+  width: 100%;
+  display: flex;
+  font-size: 16px;
+  margin-top: 10px;
+  flex-direction: column;
+  max-width: 500px;
+  color: $text_black;
+  background-color: $navbar_light;
+}
+.menu_navbar[data-theme="default"] {
+  color: $text_white;
+  background-color: $navbar;
+}
+.menu_navbar[data-theme="light"] {
+  color: $text_black;
+  background-color: $navbar_light;
+}
+.hidden_button {
+  display: none;
+}
+.nav_static {
+  margin-top: -5px;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  position: fixed;
+  background: #3B678C;
+  border-bottom-right-radius: 25px;
+  z-index: 9000;
+  color: white;
+}
+.nav_button {
+  min-width: 100px;
+  max-width: 130px;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 400ms;
+  cursor: pointer;
+  font-weight: 600;
+  margin: 3px;
+  border-radius: 15px;
+  color: white;
+  text-decoration: none;
+}
+.nav_button:hover {
+  background-color: #ffffff5d;
+  border-radius: 15px;
+  transition: 200ms;
+}
+.porfolio_img-mobile{
+  display: none;
+}
+.buttonCircle_mobile{
+  display: none;
+}
+@media all and (max-width: 800px) {
+  .porfolio_img{
+    display: none;
+  }
+  .porfolio_img-mobile{
+    display: initial;
+  }
+  .nav_static {
+    display: none;
+  }
+  .navbar {
+    background: #3B678C;
+  }
+  .navbar[data-theme="default"] {
+    color: $text_white;
+    background: #3B678C;
+  }
+  .navbar[data-theme="light"] {
+    color: $text_black;
+    background: #3B678C;
+  }
+  .buttonCircle_mobile{
+    display: initial;
+  }
+}

@@ -1,0 +1,34 @@
+.toggle-rect input[type="checkbox"] {
+  display: none;
+}
+.toggle-rect input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  width: 2.8em;
+  height: 1.3em;
+  margin-bottom: 20px;
+  border-radius: 0.2em;
+  border-radius: 50px;
+  background: #ff7d7dcc;
+  border: 1px solid rgba(109, 109, 109, 0.4);
+  cursor: pointer;
+}
+.toggle-rect input[type="checkbox"] + label:before {
+  content: "";
+  display: block;
+  width: 1.1em;
+  height: 1.1em;
+  border-radius: 100%;
+  background: #222222;
+  position: absolute;
+  left: 0.1em;
+  top: 0.1em;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.toggle-rect input[type="checkbox"]:checked + label {
+  background: #84bdffcc;
+}
+.toggle-rect input[type="checkbox"]:checked + label:before {
+  left: 1.6em;
+}
